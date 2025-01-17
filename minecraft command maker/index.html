@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft Fill Command Generator</title>
+</head>
+<body>
+    <h1>Minecraft Fill Command Generator</h1>
+    <form id="fillCommandForm">
+        <label for="startX">Start X:</label>
+        <input type="number" id="startX" name="startX" required><br><br>
+        
+        <label for="startY">Start Y:</label>
+        <input type="number" id="startY" name="startY" required><br><br>
+        
+        <label for="startZ">Start Z:</label>
+        <input type="number" id="startZ" name="startZ" required><br><br>
+        
+        <label for="endX">End X:</label>
+        <input type="number" id="endX" name="endX" required><br><br>
+        
+        <label for="endY">End Y:</label>
+        <input type="number" id="endY" name="endY" required><br><br>
+        
+        <label for="endZ">End Z:</label>
+        <input type="number" id="endZ" name="endZ" required><br><br>
+        
+        <label for="block">Block:</label>
+        <select id="block" name="block" required>
+            <option value="minecraft:stone">Stone</option>
+            <option value="minecraft:dirt">Dirt</option>
+            <option value="minecraft:glass">Glass</option>
+            <!-- 他のブロックも追加できます -->
+        </select><br><br>
+        
+        <button type="button" onclick="generateCommand()">Generate Command</button>
+    </form>
+    
+    <p id="errorMessage" style="color: red;"></p>
+    <p id="commandOutput"></p>
+    <button id="copyButton" onclick="copyCommand()" style="display: none;">Copy Command</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
